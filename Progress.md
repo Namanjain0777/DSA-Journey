@@ -1,9 +1,7 @@
 ## DSA Progress Tracker
 
-✔ Arrays – 25 problems  
-✔ Strings – 15 problems  
-✔ Recursion – 10 problems  
-⏳ Trees – In progress  
+### Start Date: 28 Jan 2026
 
-LeetCode: 120 problems solved  
-Start Date: Jan 2026
+#### Day 1 
+1. Time Complexity + Space Complesity ✅ 
+2. Patterns ✅ 

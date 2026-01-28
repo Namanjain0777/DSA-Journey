@@ -1,0 +1,3 @@
+git add .
+git commit -m "Arrays: solved 2 easy + 1 medium"
+git push
