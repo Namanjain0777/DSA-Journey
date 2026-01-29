@@ -15,5 +15,7 @@
     
     b. 20 problem More ......
 3. Hashing
+4. Sorting
+5. Arrays 
     
-    
+    a.5 easy done 
