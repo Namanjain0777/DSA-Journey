@@ -19,3 +19,6 @@
 5. Arrays 
     
     a.5 easy done 
+6. String
+
+    a. Notes Done
