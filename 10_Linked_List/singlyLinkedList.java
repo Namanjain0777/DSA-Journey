@@ -123,7 +123,21 @@ public class singlyLinkedList {
         temp.next = temp.next.next;
         size--;
     }
+
+    public void reverse() {
+        Node prev = null;
+        Node curr = head;
+        tail = head; // old head becomes new tail
     
+        while (curr != null) {
+            Node next = curr.next; // store next
+            curr.next = prev;      // reverse link
+            prev = curr;           // move prev
+            curr = next;           // move curr
+        }
+    
+        head = prev; // new head
+    }
     // Display LinkedList
     public void display() {
         Node temp = head;
@@ -147,12 +161,14 @@ public class singlyLinkedList {
         list.addAtStart(1);
         list.addAtIndex(2, 15);
         list.display();
-        list.deleteAtStart();
-        list.display();
-        list.deleteAtEnd();
-        list.display();
-        list.deleteAtIndex(1);
-        list.display();   // 10 -> 20 -> 30 -> END
+        // list.deleteAtStart();
+        // list.display();
+        // list.deleteAtEnd();
+        // list.display();
+        // list.deleteAtIndex(1);
+        // list.display();   // 10 -> 20 -> 30 -> END
         System.out.println("Size: " + list.size());
+        list.reverse();
+        list.display();
     }
 }
