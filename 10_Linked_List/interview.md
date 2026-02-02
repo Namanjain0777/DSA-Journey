@@ -34,7 +34,7 @@ Interviewers mainly test you on **these cases**, not basic insertion.
 ---
 
 ### 3️⃣ Index Validation
-```
+
 Always check:
 ```java
 index < 0 || index > size   // insertion
@@ -63,7 +63,7 @@ deleteAtEnd()
 
 👉 Return immediately, or logic will run twice.
 ```
-🔹 SINGLY LINKED LIST (SLL) – EDGE CASES
+### 🔹 SINGLY LINKED LIST (SLL) – EDGE CASES
 
 🟢 Insert at Start
 ```
@@ -116,7 +116,7 @@ NullPointerException on last node
 
 Looping size - 1 instead of size - 2
 ```
-🔹 DOUBLY LINKED LIST (DLL) – EDGE CASES
+### 🔹 DOUBLY LINKED LIST (DLL) – EDGE CASES
 
 🟢 Insert at Start
 ```
