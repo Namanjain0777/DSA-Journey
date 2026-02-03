@@ -73,8 +73,8 @@
 1. Sort an array using Bubble Sort
 2. Sort an array using Selection Sort
 3. Sort an array using Insertion Sort
-4. Check if an array is already sorted (use Bubble Sort optimization)
-5. Sort an array in descending order using Insertion Sort
+4. Check if an array is already sorted (use Bubble Sort optimization)                               🔴
+5. Sort an array in descending order using Insertion Sort                                             🔴
 ```
 📌 Focus:
 Swapping

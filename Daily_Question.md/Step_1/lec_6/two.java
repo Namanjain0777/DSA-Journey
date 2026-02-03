@@ -1,8 +1,6 @@
-// Count frequency of elements in an array
-
-public class one {
+public class two {
     public static void main(String[] args) {
-        int [] a = {1,2,2,3,4,4,5,1,6,8,8,9,9,9,9,8};
+        int [] a = {1,2,2,3,4,4,5,1,6,8,8,9,9,9};
         int [] freq = new int[a.length];
         for(int i = 0; i < a.length; i++){
             freq[i] = -1;
@@ -19,10 +17,14 @@ public class one {
                 freq[i] = count;
             }
         }
-        for(int i = 0; i < a.length; i++){
-            if(freq[i] != 0){
-                System.out.println(a[i] + " occurs " + freq[i] + " times");
+        int maxFreq = 0, index = -1;
+        for (int i = 0; i < a.length; i++) {
+            if (freq[i] > maxFreq) {
+                maxFreq = freq[i];
+                index = i;
             }
         }
+        System.out.println("Element with max frequency: " + a[index] + " (freq = " + maxFreq + ")");
+    
     }
 }
