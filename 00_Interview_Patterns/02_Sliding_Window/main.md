@@ -1,124 +1,120 @@
+🧠 SLIDING WINDOW – DEEP DIVE (INTERVIEW LEVEL)
+```
+❓ What is Sliding Window?
 
-1️⃣ What is Sliding Window? (Super Simple)
-```
-Sliding Window means:
+Sliding Window is used to process contiguous subarrays / substrings by maintaining a window and sliding it instead of recalculating everything again and again.
 
-    We look at a small part (window) of the array/string,
-    then slide that window instead of recomputing everything again.
+👉 Goal:
+Avoid repeated work
+Turn O(n²) → O(n)
 
-Think of a window moving over data.
-```
-2️⃣ Why do we need Sliding Window?
-```
-Without sliding window, we do:
-    Nested loops ❌
-    Recalculate sums again & again ❌
-    Time complexity becomes O(n²) ❌
-With sliding window:
-    Single loop ✅
-    Reuse previous work ✅
-    Time complexity O(n) ✅
-```
-3️⃣ When to Use Sliding Window?
-```
-Use this pattern when you see:
-“subarray”
-“substring”
-“contiguous”
-“window of size k”
+🚨 When should you think of Sliding Window?
+
+Your brain should auto-trigger Sliding Window when you see:
+
+Subarray / Substring
+
+Contiguous elements
+
 “maximum / minimum / longest / shortest”
-```
-🧠 Keyword = contiguous
+
+“at most K”, “exactly K”
+
+Sum, count, frequency
+
+💡 Interview hint:
+
+If brute force = “check all subarrays” → Sliding Window.
+
+🧩 Types of Sliding Window (VERY IMPORTANT)
+1️⃣ Fixed Size Window
+
+Window size is constant (k)
+
+[i ..... j]  size = k
 
 
-4️⃣ Types of Sliding Window
-```
-There are 2 types (very important):
+Used when:
 
-A) Fixed Size Window
-    Window size is given (k)
+Window size is given
 
-B) Variable Size Window
-    Window size changes based on condition
-```
-5️⃣ FIXED SIZE SLIDING WINDOW (Start Here)
-```
-🧠 Problem:
-Find the maximum sum of subarray of size k.
+Find max/min/sum of k elements
 
-Example:
-arr = [2, 1, 5, 1, 3, 2]
-k = 3
-Output: 9  → [5,1,3]
+Examples:
 
-❌ Brute Force (Don’t Do This)
+Maximum sum subarray of size k
 
-Check all subarrays → slow (O(n²))
+First negative number in every window of size k
 
-✅ Sliding Window Idea
-Calculate sum of first k elements
-Slide window:
-    subtract element going out
-    add element coming in
-```
-6️⃣ SOLUTION (Line-by-Line)
-```
-✅ JavaScript Code
-function maxSumSubarray(arr, k) {
-    let windowSum = 0;
-    let maxSum = 0;
+2️⃣ Variable Size Window (MOST IMPORTANT 🔥)
 
-    for (let i = 0; i < k; i++) {
-        windowSum += arr[i];  // initial window sum
+Window grows and shrinks based on a condition
+
+i →      j →
+
+
+Used when:
+
+Longest / shortest subarray
+
+At most / exactly k condition
+
+Examples:
+
+Longest substring without repeating characters
+
+Longest subarray with sum ≤ k
+
+🧠 INTERVIEW THINKING FRAMEWORK (MEMORIZE THIS)
+
+Before coding, answer:
+
+What does my window represent?
+
+When do I expand the window?
+
+When do I shrink the window?
+
+What condition must be satisfied?
+
+When do I update the answer?
+
+If you answer these → you win the interview.
+
+🧪 CORE TEMPLATES
+🔹 Fixed Size Window Template
+int i = 0, sum = 0;
+
+for (int j = 0; j < n; j++) {
+    sum += arr[j];
+
+    if (j - i + 1 == k) {
+        // update answer
+        sum -= arr[i];
+        i++;
     }
-
-    maxSum = windowSum;
-
-    for (let i = k; i < arr.length; i++) {
-        windowSum = windowSum - arr[i - k] + arr[i];
-        maxSum = Math.max(maxSum, windowSum);
-    }
-
-    return maxSum;
 }
-```
-🧠 Explanation
-```
-First loop → sum of first window
-Second loop:
-    remove left element
-    add right element
-Keep track of max
-```
-⏱️ Time: O(n)
-📦 Space: O(1)
 
-7️⃣ VISUAL EXPLANATION
-```
-[2, 1, 5] 1 3 2 → sum = 8
-  2 [1, 5, 1] 3 2 → sum = 7
-    2 1 [5, 1, 3] 2 → sum = 9 ✅
-```
-8️⃣ EASY EXERCISE (Try Yourself)
-```
-❓ Question:
-Find the minimum sum subarray of size k.
-Example:
-arr = [3, 4, 1, 1, 6]
-k = 2
-Output: 2  → [1,1]
+🔹 Variable Size Window Template
+int i = 0;
 
-👉 Hint: same logic, change max to min
-```
-9️⃣ INTERVIEW QUESTION (No Solution)
-```
-❓ Question:
-Find the maximum average subarray of size k.
-🔥 QUICK CHECK (Answer in your head)
-If question says:
-    “Longest substring with…”
-    “Smallest subarray with…”
+for (int j = 0; j < n; j++) {
+    // add arr[j]
 
-➡️ Sliding Window (Variable Size)
+    while (condition is violated) {
+        // remove arr[i]
+        i++;
+    }
+
+    // update answer
+}
+
+❌ COMMON MISTAKES (INTERVIEW KILLERS)
+
+❌ Confusing fixed vs variable window
+❌ Forgetting to shrink window
+❌ Updating answer at wrong time
+❌ Using nested loops unnecessarily
+
 
 ```

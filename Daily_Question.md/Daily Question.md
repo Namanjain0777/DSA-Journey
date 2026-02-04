@@ -108,7 +108,7 @@ Space vs time tradeoff
 1. Find the largest and smallest element in an array
 2. Reverse an array in-place
 3. Move all zeros to the end of the array
-4. Rotate an array by K positions
+4. Rotate an array by K positions            📌Use Recusion📌 
 5. Find the second largest element in an array
 ```
 📌 Focus: indexing, loops, in-place operations
@@ -132,7 +132,7 @@ Space vs time tradeoff
 📌 Focus: mid calculation, boundaries
 
 # STEP 4: BINARY SEARCH
-## Lec 1 : 1D Binary Search
+## Lec 1 : 1D Binary Search  🔴
 ```
 1. Implement Binary Search in a sorted array
 2. Find the first and last occurrence of an element
@@ -142,7 +142,7 @@ Space vs time tradeoff
 ```
 📌 Focus: left/right boundaries, mid calculation
 
-## Lec 2 : Binary Search in 2D Arrays
+## Lec 2 : Binary Search in 2D Arrays  🔴
 ```
 1. Search an element in a row-wise sorted 2D matrix
 2. Search an element in a row-wise & column-wise sorted matrix
@@ -152,7 +152,7 @@ Space vs time tradeoff
 ```
 📌 Focus: row elimination, index mapping
 
-## Lec 3 : Binary Search on Answer
+## Lec 3 : Binary Search on Answer  🔴
 ```
 1. Find the integer square root of a number
 2. Find the minimum days to make bouquets
