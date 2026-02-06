@@ -83,8 +83,8 @@ Passes
 
 Optimization (early break)
 
-## Lec 2: Sorting II
-(Cycle, Merge, Quick, Count, Radix)
+## Lec 2: Sorting II  🔴
+(Cycle, Merge, Quick, Count, Radix) 
 ```
 1. Sort an array using Merge Sort
 2. Sort an array using Quick Sort
