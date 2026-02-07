@@ -62,8 +62,9 @@ Implement Order-Agnostic Binary Search
 
 Search an element in a descending sorted array
 
-Detect whether array is ascending or descending
+Detect whether array is ascending or descending  
 ```
+# Done Till This 
 2D Arrays
 ```
 Search an element in a 2D matrix (brute force)

@@ -1,7 +1,7 @@
 
 public class two {
     public static void main(String[] args) {
-        int [] arr = {1, 2, 3, 4, 5};
+        int [] arr = {5,4,3,2,1};
         int n = arr.length;
         int target = 3;
         int left = 0 ; 
