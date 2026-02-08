@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-public class eleven {
+public class twelve {
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<>();
 
@@ -11,10 +11,11 @@ public class eleven {
         stack.push(63);
         stack.push(13);
         stack.push(175);
-        if(stack.size()==0){
-            System.out.println("Stack is Empty ");
-        }else{
-            System.out.println("Stack is NOt Empty");
+        int size = 0;
+        for (Integer val : stack) {
+            size++;
         }
+        System.out.println("Size: " + size);
+
     }    
 }
