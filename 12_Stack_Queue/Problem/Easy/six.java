@@ -1,0 +1,19 @@
+import java.util.Stack;
+
+public class six {
+    public static void main(String[] args) {
+        Stack <Integer> stack = new Stack<>();
+        stack.push(1);
+        stack.push(2);
+        stack.push(5);
+        stack.push(54);
+        stack.push(63);
+        stack.push(13);
+        stack.push(175);
+        System.out.println("Original: "+ stack);;
+        stack.pop();
+        System.out.println("One Pop: "+stack);
+        System.out.print(stack.peek());
+
+    }    
+}
