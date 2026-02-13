@@ -1,0 +1,25 @@
+# Trees
+
+## Pre - req
+Recursion
+
+Oops
+
+
+every Node has 2 point and if it empty the value is null 
+
+O(log n)
+
+ordered Storage
+
+cost efficient 
+
+
+
+
+
+
+
+
+
+
